@@ -1,0 +1,404 @@
+@rem:77rem;
+body, div, p, h1, h2, h3, h4, h5, h6,
+dl, dt, dd, ul, ol, li,
+form, button, input
+{
+	margin:0;
+	padding:0;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+img{
+	vertical-align:top;
+}
+em,i{
+	font-style: normal;
+}
+a,input,button{
+	/*阴影*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	/*ios下圆角*/
+	-webkit-appearance:none;
+	border:none;
+	outline:none;
+}
+
+html,body{
+	height:100%;
+	font-family:'Helvetica'; /*所有移动端的英文字体 */
+	-webkit-text-size-adjust:100%;
+	
+	overflow:-hidden;
+}
+.clearfix:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.clearfix {
+	zoom:1; /* for IE6 IE7 */
+}
+
+/*头部开始*/
+#wrap{
+	position: relative;
+	height: 100%;
+}
+#wrap .con{
+	height: 100%;
+	overflow: hidden;
+}
+.header{
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	width: 100%;
+	height: 86/@rem;
+	background: -webkit-linear-gradient(top,rgba(0,0,0,.7),rgba(0,0,0,0));
+	background: linear-gradient(top,rgba(0,0,0,.7),rgba(0,0,0,0));
+	display: flex;
+	display:-webkit-flex;
+	flex-direction:row;
+	justify-content:space-around;
+}
+.header .menu{
+	width:41/@rem;
+	height:66/@rem;
+	padding:20/@rem 0 0 40/@rem;
+}
+.header .menu a{
+	width:41/@rem;
+	height:34/@rem;
+	display:block;
+	background:url(../img/download.png);
+	background-size:564/@rem 62/@rem;
+	background-position:0 -12/@rem
+}
+.header .login{
+	height:66/@rem;
+	padding:20/@rem 40/@rem 0 0;
+	display: flex;
+	display: -webkit-flex;
+}
+.header .login a{
+	font-size:24/@rem;
+	color:white;
+	align-items:center;
+}
+.header .search-con{
+	position:relative;
+	width:530/@rem;
+	height:100%;
+	margin:0 auto;
+	border-radius:5/@rem;
+}
+
+.header .search-con .search{
+	width:100%;
+	height:66/@rem;
+	vertical-align:top;
+	margin-top:8/@rem;
+	text-indent:21/@rem;
+	border-radius:5/@rem;
+}
+.header .search-con .search-submit{
+	position:absolute;
+	top:22/@rem;
+	right:25/@rem;
+	width:34/@rem;
+	height:34/@rem;
+	background:url(../img/download.png);
+	background-size:564/@rem 62/@rem;
+	background-position:-167/@rem -11/@rem
+}
+
+/*头部轮播图*/
+.main-slide{
+	position:relative;
+	height:362/@rem;
+
+}
+.main-slide ul{
+	position:absolute;
+	left:0;
+	top:0;
+	height:100%;
+}
+.main-slide ul li{
+	height:100%;
+	float:left;
+}
+.main-slide ul li a img{
+	width:100%;
+	height:100%;
+}
+.main-slide .dot{
+	position:absolute;
+	bottom:16/@rem;
+	width:100%;
+	line-height:0;
+	text-align:center;
+}
+.main-slide .dot span{
+	width:14/@rem;
+	height:14/@rem;
+	background:rgba(0,0,0,0.5);
+	display:inline-block;
+	vertical-align:top;
+	border-radius:7/@rem;
+}
+.main-slide .dot span.on{
+	background:#F40;
+}
+
+/*功能模块*/
+.module{
+	height:278/@rem;
+	padding-top:8/@rem;
+}
+.module ul{
+	height:121/@rem;
+	margin-bottom:8/@rem;
+	display: flex;
+	display: -webkit-flex;
+}
+.module ul li{
+	width:770/5/@rem;
+	height:120/@rem;
+	flex-wrap:wrap;
+	box-sizing: border-box;
+}
+.module ul li a{
+	display:block;
+	height:100%;
+	text-align:center;
+	font-size:18/@rem;
+	color:black
+}
+.module ul li a img{
+	width:72/@rem;
+	height:72/@rem;
+	display:block;
+	margin:0 auto;
+	margin-bottom: 5/@rem;
+}
+
+/*天猫热点*/
+.todayFocus{
+	height:80/@rem;
+}
+.todayFocus .hotImg{
+	width:132/@rem;
+	height:100%;
+	text-align:center;
+	border-right: 1px solid #e7e7e7;
+	float:left;
+}
+
+.todayFocus .hotImg img{
+	width:107/@rem;
+	height:74/@rem;
+
+}
+.todayFocus .news{
+	width:46/@rem;
+	height:46/@rem;
+	float:left;
+	margin:20/@rem 20/@rem 0;
+}
+.todayFocus .todayCon{
+	position:relative;
+	width:540/@rem;
+	height:100%;
+	float:right;
+	overflow:hidden;
+}
+.todayFocus .todayCon ul{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+.todayFocus .todayCon ul li{
+	height:80/@rem;
+}
+.todayFocus .todayCon ul li a{
+	display:block;
+	height:100%;
+}
+.todayFocus .todayCon ul li a span{
+	display:block;
+	height:22/@rem;
+	font-size:22/@rem;
+	padding:8/@rem 0/
+}
+.todayFocus .todayCon ul li a span:nth-of-type(1){
+	color:black;
+}
+.todayFocus .todayCon ul li a span:nth-of-type(2){
+	color:red;
+}
+
+
+/*公共样式*/
+.public-title{
+	background: #f0f0f0;
+}
+.public-title ul{
+	display: flex!important;
+	box-sizing: border-box;
+}
+.public-title ul li a{
+	display:block;
+	text-align:center;
+	height:100%;
+}
+.public-title ul li{
+	float: left;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	height: 100%;
+	background: white;	
+}
+
+
+/*必抢*/
+.public-title .title{
+	height: 64/@rem;
+	line-height: 60/@rem;
+	text-align:center;
+}
+.public-title .title .line{
+	display: inline-block;
+	width:68/@rem;
+	height:1px;
+	border-bottom:1px solid #F6B7B7;	
+	vertical-align:middle;
+}
+.public-title .title img{
+	height:32/@rem;
+	vertical-align:middle;
+}
+.public-title .title .title-con{
+	font-size:30/@rem;
+	color: #FF2E2E;
+	vertical-align:middle;
+}
+.buy ul{
+	height:300/@rem;
+	margin-bottom: 1px;
+}
+.buy ul li{
+	margin-right:1px;
+	background: white;
+}
+.buy ul li a .title{
+	display:block;
+	font-size:25/@rem;
+	color: #2F2F2F;
+	height:54/@rem;
+	line-height:54/@rem;
+	vertical-align: top;
+}
+.buy ul li a img{
+	display:block;
+	margin:0 auto;
+	width:167/@rem;
+	height:167/@rem;
+	vertical-align: top;
+}
+.buy ul li a .price{
+	text-decoration:none;
+	color: #ff2e2e;
+	font-size:20/@rem;
+	vertical-align: top;
+}
+.buy ul li a .cost-price{
+	text-decotation:none;
+	font-size:16/@rem;
+	color: #9b9b9b;
+	vertical-align: top;
+}
+
+/*品牌特卖*/
+.Sale ul{
+	height:230/@rem;
+}
+.Sale ul li{
+	height:100%;
+}
+
+/*品牌资讯*/
+.info ul{
+	height:360/@rem;
+}
+
+/*广告1*/
+.ad{
+	height:192/@rem;
+}
+
+/*品牌生活*/
+.live ul{
+	height:302/@rem;
+}
+.live ul li{
+	height:100%;
+}
+.live ul li:nth-child(1){
+	flex:340/@rem;	
+	margin-right:2px;
+}
+.live ul li:nth-child(2){
+	flex:428/@rem;
+	overflow:hidden;
+}
+.live ul li:nth-child(2) div{
+	border-bottom:2px solid #F0F0F0;
+}
+
+/* 猜你喜欢 */
+.like ul{
+	margin-bottom:6/@rem;
+}
+.like ul li{
+	height:508/@rem;
+}
+.like ul li:nth-child(1){
+	margin-right:6/@rem;
+}
+.like ul li a .pic{
+	width:382/@rem;
+	height:372/@rem
+}
+.like ul li a .like-con{
+	height:133/@rem;
+}
+.like ul li a .like-con .title{
+	height:58/@rem;
+	line-height:35/@rem;
+	font-size:30/@rem;
+	display:block;
+	color:#666;
+	overflow:hidden;
+	padding:10/@rem;
+}
+.like ul li a .like-con .price{
+	display:block;
+	color:#dd2727;
+	font-size:15/@rem;
+	text-align:left;
+	padding:10/@rem;
+}
+
+.like ul li a .like-con .price .integer{
+	font-size:30/@rem;
+}
